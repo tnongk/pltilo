@@ -1,0 +1,10 @@
+\def\PrmsLnSlt#1{\LtrGl#1\LtrGlFin} %許改行
+\def\LtrGl#1{%Litera gluo 字糊
+  \ifx#1\LtrGlFin\let\sekva\relax
+  \else#1\hskip0pt plus1pt\let\sekva\LtrGl\fi
+  \sekva}
+\def\url{\bgroup\catcode`\#=11\catcode`\%=11%
+  \catcode`\&=11\catcode`\$=11%
+  \catcode`\_=11\catcode`\~=11%
+  \tt\urlA}
+\def\urlA#1{\PrmsLnSlt{#1}\egroup\hskip3pt}
